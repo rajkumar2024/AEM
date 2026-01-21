@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="name">MyProject UI Content</entry>
+    <entry key="description">UI Content Package with CFM Models</entry>
+    <entry key="group">com.myproject</entry>
+    <entry key="version">1.0.0-SNAPSHOT</entry>
+    <entry key="createdBy">AEM Engineering Agent</entry>
+</properties>

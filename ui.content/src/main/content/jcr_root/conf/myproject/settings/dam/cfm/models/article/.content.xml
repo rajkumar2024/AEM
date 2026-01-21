@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" 
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Template">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Article"
+        cq:model="/conf/myproject/settings/dam/cfm/models/article">
+        <model
+            jcr:primaryType="nt:unstructured">
+            <elements jcr:primaryType="nt:unstructured">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    fieldLabel="Title"
+                    name="title"
+                    metaType="text-single"
+                    renderReadOnly="{Boolean}false"
+                    required="{Boolean}true"
+                    maxLength="{Long}255"
+                    displayPatternType="placeholder"
+                    placeholderText="Enter article title"/>
+                <description
+                    jcr:primaryType="nt:unstructured"
+                    fieldLabel="Description"
+                    name="description"
+                    metaType="text-multi"
+                    renderReadOnly="{Boolean}false"
+                    required="{Boolean}false"
+                    displayPatternType="placeholder"
+                    placeholderText="Enter article description"/>
+                <publishdate
+                    jcr:primaryType="nt:unstructured"
+                    fieldLabel="Publish Date"
+                    name="publishdate"
+                    metaType="date"
+                    renderReadOnly="{Boolean}false"
+                    required="{Boolean}false"
+                    displayPatternType="placeholder"
+                    placeholderText="Select publish date"
+                    typeHint="Date"/>
+            </elements>
+        </model>
+    </jcr:content>
+</jcr:root>

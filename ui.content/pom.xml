@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.myproject</groupId>
+        <artifactId>myproject</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>myproject.ui.content</artifactId>
+    <packaging>content-package</packaging>
+
+    <name>MyProject - UI Content Package</name>
+    <description>UI content package containing configurations and Content Fragment Models</description>
+
+    <build>
+        <sourceDirectory>src/main/content/jcr_root</sourceDirectory>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.jackrabbit</groupId>
+                <artifactId>filevault-package-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <group>com.myproject</group>
+                    <name>myproject.ui.content</name>
+                    <packageType>content</packageType>
+                    <accessControlHandling>merge</accessControlHandling>
+                    <validatorsSettings>
+                        <jackrabbit-filter>
+                            <options>
+                                <validRoots>/conf,/content</validRoots>
+                            </options>
+                        </jackrabbit-filter>
+                    </validatorsSettings>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
